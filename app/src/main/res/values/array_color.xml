@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="AndroidColors">
+        <item>@color/blue_light</item>
+        <item>@color/green_lime</item>
+        <item>@color/green_pastel</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/green_pastel</item>
+        <item>@color/blue_light</item>
+        <item>@color/pinkish_red</item>
+        <item>@color/red</item>
+    </integer-array>
+</resources>

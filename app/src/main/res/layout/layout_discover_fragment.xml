@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.moviedb.view_model.DiscoverViewModel" />
+            type="com.indocyber.moviedb.view_model.DiscoverViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

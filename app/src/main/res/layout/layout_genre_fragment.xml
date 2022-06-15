@@ -4,7 +4,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.moviedb.view_model.GenreViewModel" />
+            type="com.indocyber.moviedb.view_model.GenreViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

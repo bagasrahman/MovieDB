@@ -4,7 +4,7 @@
     package="com.example.moviedb">
 
     <application
-        android:name=".MovieDBApp"
+        android:name="com.indocyber.moviedb.MovieDBApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MovieDB"
         tools:targetApi="31">
         <activity
-            android:name=".activity.RootActivity"
+            android:name="com.indocyber.moviedb.activity.RootActivity"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

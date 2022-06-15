@@ -5,11 +5,11 @@
 
         <variable
             name="dataMovieDetail"
-            type="com.example.entity.movie.details.MovieDetailsResponse" />
+            type="com.indocyber.entity.movie.details.MovieDetailsResponse" />
 
         <variable
             name="vm"
-            type="com.example.moviedb.view_model.DetailViewModel" />
+            type="com.indocyber.moviedb.view_model.DetailViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -76,7 +76,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/videoTrailer" />
 
                     <LinearLayout
-                        android:id="@+id/linearLayout"
+                        android:id="@+id/movieDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -138,6 +138,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
+                        android:justificationMode="inter_word"
                         android:fontFamily="@font/titillium_light"
                         android:layout_marginTop="4dp"
                         android:text="@{dataMovieDetail.overview}"

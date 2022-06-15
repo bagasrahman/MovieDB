@@ -3,7 +3,7 @@
     <data>
         <variable
             name="data"
-            type="com.example.entity.movie.reviews.Review" />
+            type="com.indocyber.entity.movie.reviews.Review" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

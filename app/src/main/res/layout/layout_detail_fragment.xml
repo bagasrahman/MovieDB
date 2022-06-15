@@ -14,11 +14,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@color/white"
         xmlns:custom="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:padding="12dp"
         tools:context=".activity.movie_details.MovieDetailsActivity">
 
@@ -57,11 +57,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <androidx.fragment.app.FragmentContainerView
+                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                         android:id="@+id/videoTrailer"
                         android:layout_width="match_parent"
                         android:layout_height="220dp"
                         android:layout_marginTop="8dp"
+                        app:enableAutomaticInitialization="false"
                         app:layout_constraintEnd_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,6 +90,7 @@
                             android:layout_width="220dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/titillium_light"
+                            android:text="movie title"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             tools:text="@{dataMovieDetail.title}" />
@@ -101,6 +103,7 @@
                             android:drawablePadding="8dp"
                             android:fontFamily="@font/titillium_light"
                             android:gravity="center"
+                            android:text="release date"
                             app:drawableStartCompat="@drawable/ic_baseline_date_range_24"
                             tools:text="@{dataMovieDetail.releaseDate}" />
 
@@ -108,10 +111,11 @@
                             android:id="@+id/rating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/titillium_light"
                             android:layout_marginTop="8dp"
                             android:drawablePadding="8dp"
+                            android:fontFamily="@font/titillium_light"
                             android:gravity="center"
+                            android:text="rating"
                             app:drawableStartCompat="@drawable/ic_baseline_rate_24"
                             tools:text="@{String.valueOf(dataMovieDetail.voteAverage)}" />
 
@@ -138,9 +142,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
-                        android:justificationMode="inter_word"
-                        android:fontFamily="@font/titillium_light"
                         android:layout_marginTop="4dp"
+                        android:fontFamily="@font/titillium_light"
+                        android:justificationMode="inter_word"
                         android:text="@{dataMovieDetail.overview}"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/overviewHeader" />
@@ -152,9 +156,9 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
                         android:drawablePadding="8dp"
+                        android:fontFamily="@font/titillium"
                         android:gravity="center"
                         android:text="Review"
-                        android:fontFamily="@font/titillium"
                         android:textSize="18sp"
                         app:drawableStartCompat="@drawable/ic_baseline_rate_review_24"
                         app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +172,6 @@
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/reviewHeader" />
-
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

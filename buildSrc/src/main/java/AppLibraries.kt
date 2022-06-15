@@ -9,6 +9,7 @@ fun DependencyHandler.libraries() {
     glide()
     gson()
     gander()
+    youtubePlayer()
     materialDesign()
     NavGraph()
     okHttp()

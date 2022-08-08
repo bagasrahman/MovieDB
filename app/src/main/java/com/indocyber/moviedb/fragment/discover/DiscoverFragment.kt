@@ -58,7 +58,5 @@ class DiscoverFragment : BaseFragment<DiscoverViewModel, LayoutDiscoverFragmentB
                 binding.loadingContainer.visibility = View.GONE
             }
         }
-
-
     }
 }

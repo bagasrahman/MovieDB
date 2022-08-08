@@ -17,8 +17,8 @@ class DiscoverAdapter(
         val dataMovie = getItem(position)
         holder.binding.data = dataMovie
         Glide.with(holder.binding.root).load(
-            "https://image.tmdb.org/t/p/w500${dataMovie?.backdropPath}"
-        ).into(holder.binding.movieBackdrop)
+            "https://image.tmdb.org/t/p/w500${dataMovie?.posterPath}"
+        ).into(holder.binding.moviePoster)
         holder.binding.root.setOnClickListener {
             dataMovie?.let {
                 it -> navigateToDetail(it.id)

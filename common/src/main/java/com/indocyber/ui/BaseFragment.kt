@@ -4,13 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import com.example.common.*
+import com.indocyber.common.AppResponse
+import com.indocyber.common.ResponseError
+import com.indocyber.common.ResponseLoading
+import com.indocyber.common.ResponseSuccess
 
 abstract class BaseFragment<VM : BaseViewModel, Binding : ViewDataBinding> : Fragment() {
     abstract val vm: VM
@@ -46,20 +49,20 @@ abstract class BaseFragment<VM : BaseViewModel, Binding : ViewDataBinding> : Fra
     }
 
     fun <T> observeResponseData(
-        data: MutableLiveData<com.indocyber.common.AppResponse<T>>,
+        data: MutableLiveData<AppResponse<T>>,
         success: ((T) -> Unit),
         error: ((Throwable) -> Unit)?,
         loading: (() -> Unit)? = {}
     ) {
         data.observe(this) { response ->
             when (response) {
-                is com.indocyber.common.ResponseSuccess -> {
+                is ResponseSuccess -> {
                     response.data?.let { success.invoke(it) }
                 }
-                is com.indocyber.common.ResponseError -> {
+                is ResponseError -> {
                     response.error?.let { error?.invoke(it)}
                 }
-                is com.indocyber.common.ResponseLoading -> {
+                is ResponseLoading -> {
                     loading?.invoke()
                 }
             }

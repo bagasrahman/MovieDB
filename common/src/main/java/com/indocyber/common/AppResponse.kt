@@ -26,16 +26,16 @@ sealed class AppResponse<T>(
 
 class ResponseSuccess<T>(
     data: T
-) : com.indocyber.common.AppResponse<T>(data, null, null, null)
+) : AppResponse<T>(data, null, null, null)
 
 class ResponseError<T>(
     exc: Exception?, code: Int, responseBody: ResponseBody?
-) : com.indocyber.common.AppResponse<T>(null, exc, code, responseBody) {
+) : AppResponse<T>(null, exc, code, responseBody) {
     companion object {
         const val ERROR_SYSTEM = -1
         const val ERROR_BACKEND = -2
     }
 }
 
-class ResponseLoading<T> : com.indocyber.common.AppResponse<T>(null, null, null, null)
+class ResponseLoading<T> : AppResponse<T>(null, null, null, null)
 

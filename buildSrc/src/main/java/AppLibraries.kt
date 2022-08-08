@@ -15,5 +15,4 @@ fun DependencyHandler.libraries() {
     okHttp()
     retrofit()
     vmLifeCycle()
-    googleFirebase()
 }

@@ -24,8 +24,8 @@ class DetailViewModel @Inject constructor(
     private val reviewUseCase: ReviewUseCase,
     private val trailerUseCase: TrailerUseCase
 ) : BaseViewModel(application) {
-    val detailLiveData = MutableLiveData<com.indocyber.common.AppResponse<MovieDetailsResponse>>()
-    val trailerLiveData = MutableLiveData<com.indocyber.common.AppResponse<TrailerResponse>>()
+    val detailLiveData = MutableLiveData<AppResponse<MovieDetailsResponse>>()
+    val trailerLiveData = MutableLiveData<AppResponse<TrailerResponse>>()
     val pagingReviewData = MutableLiveData<PagingData<Review>>()
 
     fun getDetailMovie(movieId: Int) {

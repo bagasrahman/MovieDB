@@ -5,7 +5,6 @@ import com.indocyber.common.AppResponse
 import com.indocyber.entity.genre.Genre
 import kotlinx.coroutines.flow.flow
 
-
 class GenreUseCase(private val genreService: GenreService) {
     operator fun invoke() = flow {
         emit(AppResponse.loading())
